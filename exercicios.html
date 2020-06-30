@@ -1,0 +1,152 @@
+<html> 
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <title>Exercicios</title>
+    <script type="text/javascript" src="ex 4.js"></script>
+    <script type="text/javascript" src="ex 7.js"></script>
+</head>
+<main class="col-100 menu-urls">
+    <div class="header-2">
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="Sobremim.html">Sobre mim</a>
+                </li>
+                <li>
+                    <a href="curriculum.html">Curriculum Vitae</a>
+                </li>
+                <li>
+                    <a href="exercicios.html">Exercícios</a>
+                </li>
+                <li>
+                    <a href="contatos.html">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<body>
+<div class="jav">
+<br>
+<br>
+    <strong>Exercício Java Script</strong>
+</div>
+<div class="atividades">
+    <div class="atividade_1">
+        <h3>Atividade 1:</h3>
+        <button type="button" onclick="Evento_1()">Testar</button>
+        <script>
+            function Evento_1() {
+                alert('Teste')
+            }
+        </script>
+    </div>
+    <h3 href="">Atividade 2:</h3>
+    <div class="atividade_2">
+        <button type="button" onclick="Evento_2()">Testar</button>
+        <script type="text/javascript">
+            function Evento_2() {
+                prompt("Digite seu nome: ");
+            }
+        </script>
+    </div>
+        <h3 href="">Atividade 3:</h3>
+    <div class="atividade_3">
+        <button type="button" onclick="Evento_3()">Testar</button>
+        <script type="text/javascript">
+            function Evento_3() {
+                var user = prompt("Digite seu nome");
+                alert("Olá " + user)
+            }
+        </script>
+    </div>
+        <h3 href="">Atividade 4:</h3>
+    <div class="atividade_4">
+        <p> Entre com o número de 10 a 50</p>
+        <input id="num1" type="number" min="10" max="50">
+        <button onclick="validacao()">Testar</button>
+        <p id="imprimi"></p>
+        <script>
+            function validacao() {
+                var mens = " ";
+                if (document.getElementById("num1").validity.rangeOverflow) {
+                    mens = "Número é maior!";
+                }
+
+                else if (document.getElementById("num1").validity.rangeUnderflow) {
+                    mens = "Número é menor!";
+                }
+
+                else {
+                    mens = "Número válido!";
+                }
+                document.getElementById("imprimi").innerHTML = mens;
+            }
+        </script>
+    </div>    
+    <div class="ativ-5">
+   <h3> Atividade 5:</h3>
+
+        <p> digite o primeiro valor:</p>
+        <input id="n1" type="number">
+        <p> digite o segundo valor:</p>
+        <input id="n2" type="number">
+        <button onclick="comparar()">Testar</button>
+        <script>
+            function comparar() {
+                var n1 = document.getElementById("n1").value;
+                var n2 = document.getElementById("n2").value;
+                if (n1 < n2) { alert(n2 + " é maior!"); }
+                else { alert(n1 + " é maior!"); }
+            }
+        </script>
+    </div>
+        <div class="at-6">
+                <h3 href="">Atividade 6:</h3>
+                <input type="number" id="nF">
+                <br>
+                <br>
+                <button onclick="converterCelsius(document.getElementById('nF').value)">Converter para Celsius</button>
+                <p id="resultado"></p>
+                <script>
+                    function converterCelsius(F){
+                        var C=(5.0/9.0*(F-32));
+                        document.getElementById("resultado").innerHTML="A tempertura equivale à " + C + " graus celsius";
+                    }
+                </script>
+            </div>
+        <div class="at-7">  
+                <h3 href="">Atividade 7:</h3>
+                <p> Digite um número para visualizar a sua tabuada</p> <input id="num1" type="number">
+                        <button onclick="tab()">Testar</button>
+                        <script>
+                            var a = 1;
+                            function tab() {
+                                var b = document.getElementById("num1").value; for (cont = 0; cont < 10; cont++) {
+                                    for (conta = 0; conta <= 10; conta++) {
+                                        var result = a * b;
+                                        if (conta == 10) { document.write(b + "x" + a + "=" + result); document.write("<br>"); a++; }
+                                    }
+                                }
+                            }
+                        </script>
+              </div>
+        </div>
+    </div>
+    <br>
+</div>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+</body>
